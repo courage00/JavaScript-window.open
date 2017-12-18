@@ -31,7 +31,7 @@ public partial class New : System.Web.UI.Page
         if (returnControl != "")
         {
             //傳值給父頁面
-            this.Page.Controls.Add(new LiteralControl(string.Format("<script>opener.document.getElementById('" + returnControl + "').innerHTML={0};</script>", TextBox1.Text)));
+            this.Page.Controls.Add(new LiteralControl(string.Format("<script>opener.document.getElementById('" + returnControl + "').innerHTML='{0}';</script>", TextBox1.Text)));
            
             //關閉此視窗
             this.Page.Controls.Add(new LiteralControl("<script>window.close();</script>"));
